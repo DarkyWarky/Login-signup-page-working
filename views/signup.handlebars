@@ -1,0 +1,24 @@
+<body>
+  <div class="signup-page">
+    <div class="text"></div>
+    <h1>Login</h1>
+    <form action="/api/login" method="post" id="form">
+      <input type="email" name="email" /><label for="email">Email</label>
+      <input type="password" name="password" id="password" /><label
+        for="password"
+      >Password</label>
+      <input type="checkbox" id="showpass" />
+    </form>
+    <input type="submit" id="submit" />
+  </div>
+  <script>
+    document.getElementById("submit").addEventListener("click", function(event)
+    { event.preventDefault(); document.getElementById("form").submit(); });
+    document.getElementById('showpass').addEventListener("change", () => { const
+    passwordField = document.getElementById('password'); passwordField.type =
+    passwordField.type === 'password' ? 'text' : 'password'; });
+    document.querySelectorAll('input').forEach((input) => {
+    input.addEventListener("input", function() { input.classList.add("typing");
+    if (input.value.trim()=='') { input.classList.remove("typing"); } }); });
+  </script>
+</body>

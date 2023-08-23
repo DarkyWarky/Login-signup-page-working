@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    align-items: center;
+    background-color: gray;
+    height: 12vh;
+}
+#Image{
+    width: 150px;
+    mix-blend-mode: color-burn;
+}
+#nav-options li{
+    display: inline-block;
+    list-style: none;
+    font-size: 19px;
+    padding: 0px 5px;
+    color: black;
+    text-decoration: none;
+}
+#nav-options li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    margin: auto;
+    display: block;
+    background: #f44336;
+    transition: 0.5s;
+}
+#nav-options li:hover::after{
+    width: 100%;
+}
+#login,#Sign-up{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 2.5vh;
+    margin: 10px;
+    cursor: pointer;
+    transform-origin: left;
+    transition: 0.5s;
+}
+#login:hover,#Sign-up:hover{
+    background-color: whitesmoke;
+    filter: drop-shadow(0px 0px 20px red);
+    scale: 1.1;
+}
+#login:hover:active,#Sign-up:hover:active{
+    scale: 1;
+    transition: 0.2s;
+}
+.btns{
+    margin-right:20px ;
+}
+

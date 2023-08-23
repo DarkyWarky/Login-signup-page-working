@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(156, 248, 248);
+}
+
+.signup-page {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 500px;
+    box-shadow: 0px 0px 20px;
+}
+
+input + label {
+    position: relative;
+    left: 10px;
+    top: -45px;
+    transition: transform 0.3s ease-in-out;
+    font-size: 18px;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+input:focus + label{
+    top: -78px;
+    color: white;
+}
+#form {
+    display: block;
+    margin-top: 20px;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+#showpass{
+    position: absolute;
+    top: 290px;
+    left: 350px;
+    scale: 1.5;
+    pointer-events: fill;
+    cursor: pointer;
+    width: 20px;
+}
+h1{
+    font-size: 50px;
+    color: aliceblue;
+}
+#submit{
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+#submit:hover{
+    animation: pulse 1s infinite;
+}
+@keyframes pulse{
+    0%{
+        scale: 1;
+    }
+    60%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.typing+label{
+    top: -75px;
+    color: white;
+}
